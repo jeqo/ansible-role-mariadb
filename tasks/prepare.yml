@@ -1,0 +1,33 @@
+---
+#
+- group:
+    name: "{{ mariadb_group }}"
+    state: present
+
+- user:
+    name: "{{ mariadb_user }}"
+    group: "{{ mariadb_group }}"
+    home: "{{ mariadb_home }}"
+    createhome: yes
+    state: present
+
+- apt_repository:
+    repo: 'deb http://ftp.osuosl.org/pub/mariadb/repo/{{ mariadb_major }}/debian jessie main'
+    filename: mariadb
+    state: present
+
+- template:
+    src: mariadb-preferences.j2
+    dest: /etc/apt/preferences.d/mariadb
+
+- debconf:
+    name: "mariadb-server-{{ mariadb_major }}"
+    question: mysql-server/root_password
+    value: unused
+    vtype: password
+
+- debconf:
+    name: "mariadb-server-{{ mariadb_major }}"
+    question: mysql-server/root_password_again
+    value: unused
+    vtype: password
