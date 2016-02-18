@@ -4,3 +4,6 @@
   hosts: test01
   roles:
     - role: mariadb
+  tasks:
+    - mysql_db: name=test state=present
+    - mysql_user: name=bob password=12345 priv=*.*:ALL state=present

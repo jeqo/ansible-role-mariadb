@@ -10,3 +10,6 @@
     owner: "{{ mariadb_user }}"
     group: "{{ mariadb_group }}"
   become_user: "{{ mariadb_user }}"
+
+- name: install python module
+    pip: name=MySQL-python
