@@ -17,3 +17,4 @@
 - name: install python module
   pip:
     name: MySQL-python
+  become_user: "{{ mariadb_user }}"
