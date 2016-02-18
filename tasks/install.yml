@@ -5,7 +5,7 @@
 
 - get_url:
     url: "{{ mariadb_entrypoint_url }}"
-    dest: /home/mysql/mysql.sh
+    dest: "{{ mariadb_home }}/entrypoint.sh"
     mode: "u+x"
     owner: "{{ mariadb_user }}"
     group: "{{ mariadb_group }}"
