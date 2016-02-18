@@ -2,6 +2,5 @@
 # defaults file for mariadb
 
 
-mariadb_major: 10.1
-mariadb_version: 10.1.11+maria-1~jessie
+mariadb_version: 10.1
 mariadb_root_password: root

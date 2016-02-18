@@ -11,8 +11,10 @@
     createhome: yes
     state: present
 
+- apt_key: keyserver=keyserver.ubuntu.com id=0xcbcb082a1bb943db
+
 - apt_repository:
-    repo: 'deb http://ftp.osuosl.org/pub/mariadb/repo/{{ mariadb_major }}/debian jessie main'
+    repo: 'deb http://ftp.osuosl.org/pub/mariadb/repo/{{ mariadb_major }}/ubuntu trusty main'
     filename: mariadb
     state: present
 
