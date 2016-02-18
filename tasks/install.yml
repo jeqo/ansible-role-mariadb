@@ -12,9 +12,11 @@
     mode: "u+x"
     owner: "{{ mariadb_user }}"
     group: "{{ mariadb_group }}"
+  become: yes
   become_user: "{{ mariadb_user }}"
 
 - name: install python module
   pip:
     name: MySQL-python
+  become: yes
   become_user: "{{ mariadb_user }}"
