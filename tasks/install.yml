@@ -1,4 +1,12 @@
 ---
 #
 - apt:
-    name: mariadb-server 
+    name: mariadb-server
+
+- get_url:
+    url: https://github.com/docker-library/mariadb/blob/master/{{ mariadb_version }}/entrypoint.sh
+    dest: /home/mysql/mysql.sh
+    mode: "u+x"
+    owner: "{{ mariadb_user }}"
+    group: "{{ mariadb_group }}"
+  become_user: "{{ mariadb_user }}"
