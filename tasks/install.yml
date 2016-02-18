@@ -4,7 +4,7 @@
     name: mariadb-server
 
 - get_url:
-    url: https://github.com/docker-library/mariadb/blob/master/{{ mariadb_version }}/entrypoint.sh
+    url: "{{ mariadb_entrypoint_url }}"
     dest: /home/mysql/mysql.sh
     mode: "u+x"
     owner: "{{ mariadb_user }}"
