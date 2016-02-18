@@ -1,4 +1,0 @@
----
-#
-- apt:
-    name: mariadb-server={{ mariadb_version }} 

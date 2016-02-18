@@ -1,4 +1,0 @@
----
-# vars file for mariadb
-mariadb_user: mysql
-mariadb_group: mysql
