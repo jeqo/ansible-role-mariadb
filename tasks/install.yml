@@ -1,7 +1,10 @@
 ---
 #
 - apt:
-    name: mariadb-server
+    name: "{{ item }}"
+  with_items:
+    - mariadb-server
+    - libmariadbclient-dev
 
 - get_url:
     url: "{{ mariadb_entrypoint_url }}"
