@@ -1,0 +1,10 @@
+---
+#
+- get_url:
+    url: "{{ mariadb_entrypoint_url }}"
+    dest: "{{ mariadb_home }}/entrypoint.sh"
+    mode: "u+x"
+
+- name: install python module
+  pip:
+    name: MySQL-python
