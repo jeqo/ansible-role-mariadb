@@ -6,4 +6,8 @@
     - role: mariadb
   tasks:
     - mysql_db: name=test state=present
+      become: yes
+      become_user: mysql
     - mysql_user: name=bob password=12345 priv=*.*:ALL state=present
+      become: yes
+      become_user: mysql
