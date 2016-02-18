@@ -7,8 +7,6 @@
 - user:
     name: "{{ mariadb_user }}"
     group: "{{ mariadb_group }}"
-    home: "{{ mariadb_home }}"
-    createhome: yes
     state: present
 
 - apt_key: keyserver=keyserver.ubuntu.com id=0xcbcb082a1bb943db
