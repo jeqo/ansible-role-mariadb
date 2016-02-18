@@ -2,4 +2,5 @@
 # vars file for mariadb
 mariadb_user: mysql
 mariadb_group: mysql
+mariadb_home: "/home/{{ mariadb_user }}"
 mariadb_entrypoint_url: "https://raw.githubusercontent.com/docker-library/mariadb/master/{{ mariadb_version }}/docker-entrypoint.sh"
