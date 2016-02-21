@@ -5,7 +5,4 @@
   with_items:
     - mariadb-server
     - libmariadbclient-dev
-
-- name: install python module
-  pip:
-    name: MySQL-python
+    - python-mysqldb
