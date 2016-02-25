@@ -1,8 +1,13 @@
 ---
 #
-- apt:
+- name: install mariadb packages
+  apt:
     name: "{{ item }}"
   with_items:
     - mariadb-server
     - libmariadbclient-dev
     - python-mysqldb
+
+- name: install python module
+  pip:
+    name: MySQL-python

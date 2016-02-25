@@ -7,5 +7,3 @@
   become: yes
 
 - include: configure.yml
-  become: yes
-  become_user: "{{ mariadb_user }}"

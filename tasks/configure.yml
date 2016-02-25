@@ -4,7 +4,10 @@
     url: "{{ mariadb_entrypoint_url }}"
     dest: "{{ mariadb_home }}/entrypoint.sh"
     mode: "u+x"
+  become: yes
+  become_user: "{{ mariadb_user }}"
 
-- name: install python module
-  pip:
-    name: MySQL-python
+- template:
+    src: my.cnf.j2
+    dest: /etc/mysql/my.cnf
+  become: yes

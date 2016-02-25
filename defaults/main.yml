@@ -1,3 +1,5 @@
 ---
 # defaults file for mariadb
 mariadb_version: 10.1
+mariadb_host: 0.0.0.0
+mariadb_port: 3306
